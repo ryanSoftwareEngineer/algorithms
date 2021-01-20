@@ -1,8 +1,5 @@
-def a (b):
-    b += 1
-    return b
+'''
+this script is just for me to test new things i'm learning
+'''
 
-c = 5
-print(c)
-a(c)
-print(c)
+
