@@ -20,6 +20,7 @@ class Solution(object):
         while one < len(s):
             pair = s[one-1:one+1]
             if pair in map:
+                # looking back... this takes potentially o(n) time to copy the string so
                 s = s[0:one-1] + s[one+1:len(s)]
                 one -=2
                 continue
