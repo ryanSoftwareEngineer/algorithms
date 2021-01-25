@@ -7,8 +7,6 @@ Output: [1,2,3,6,9,8,7,4,5]
 
 # iterate the matrix right until out of bounds
 #  if position > len(matrix) or > len(matrix[0]) or <0 or in cache
-# todo: instead of caching coordinates visited perhaps you could keep track of 4 numers a,b,c,d
-#       for when to stop... when direction changes incremenent/decrement abcd as it should
 # return ..
 class Solution:
     def spiralOrder(self, matrix):
