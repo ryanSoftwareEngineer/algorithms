@@ -12,7 +12,7 @@ Input: s = "{[]}"
 Output: true
 """
 
-# this solution is slightly slower than using a stack but it's a novel solution not on the solutions list
+
 class Solution(object):
     def isValid(self, s):
         map = {"()", "{}", "[]"}
@@ -20,6 +20,8 @@ class Solution(object):
         while one < len(s):
             pair = s[one-1:one+1]
             if pair in map:
+                # this line below will take o(n) time to copy each string making the whole complexity o(n2)
+                # stack solution is better
                 s = s[0:one-1] + s[one+1:len(s)]
                 one -=2
                 continue
