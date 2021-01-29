@@ -17,8 +17,8 @@ class Solution():
         return target == 0
 
 
-#my first attempt was a dfs, taking the maximum step possible and movingback when hitting a wall and then jumping again
-# storing each index in visited[] this is o(n) run time technically but still it's still TLE. The above solution is much faster
+#my first attempt was a dfs / greedy design, taking the maximum step possible and iterating back when hitting a wall
+# storing each index in visited[] this is reduced to o(n) run time but it's TLE and it uses xtra memory
 class Solution2(object):
     def canJump2(self, nums):
         return len(self.util(nums, 0, [], set()))>0

@@ -5,7 +5,7 @@ Output: 6
 Explanation: [4,-1,2,1] has the largest sum = 6.
 '''
 
-# the divide and conquer approach is technically slower than kadane's but it's helpful fr learning the d&c design paradigm
+# the divide and conquer approach
 
 def max_sub(nums, start, end ):
     if start == end:

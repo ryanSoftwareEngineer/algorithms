@@ -29,8 +29,6 @@ class Solution(object):
         return new_node
 
 ''' 
-The input format for leetcode is in the form [[2,4],[1,3],[2,4],[1,3]]
-but the output wanted is a node.
 The output of this graph is 
 {
 1: [2, 4],
