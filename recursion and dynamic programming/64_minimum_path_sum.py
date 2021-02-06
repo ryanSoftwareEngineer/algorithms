@@ -28,7 +28,8 @@ def minPathSum2(grid):
     print(result)
     return result
 
-grid = [[1,2,3],[4,5,6]]
+grid = [[1,2,3],
+        [4,5,6]]
 minPathSum2(grid)
 # output:
 # [1, 3, 6] [1, 5]
