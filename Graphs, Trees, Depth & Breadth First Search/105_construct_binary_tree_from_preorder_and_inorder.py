@@ -32,14 +32,7 @@ class Solution:
         node.right, index = self.util(preorder, inorder, val_index+1, end, index+1)
         return node, index
 
-
-
 preorder = [3,1,2,4]
 inorder = [1,2,3,4]
 a = Solution()
 b= a.buildTree(preorder,inorder)
-print(b.val)
-print(b.left.val)
-print(b.left.right.val)
-# print(b.left.left.val)
-# print(b.left.right.val)
