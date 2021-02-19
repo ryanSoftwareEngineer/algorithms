@@ -17,9 +17,7 @@ class Solution:
         graph =[[] for i in range(numCourses)]
         visited = [None for i in range(numCourses)]
         for req, course in prerequisites:
-            print(req, course)
             graph[req].append(course)
-            print(graph)
 
         for i in range(numCourses):
             if not self.dfs(graph, visited, i):
@@ -27,7 +25,7 @@ class Solution:
         return True
 
     def dfs(self, graph, visited, node):
-        print(graph, visited, node)
+        # print(graph, visited, node)
         if visited[node] is not None:
             return visited[node]
         visited[node] = False
