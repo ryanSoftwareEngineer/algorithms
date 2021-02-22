@@ -18,7 +18,7 @@ class Solution:
         if len(intervals)<2:
             return intervals
         results = []
-        # what if you could do it without sort
+        # what if you could do it without sort?
         intervals.sort(key= lambda x: x[0])
         prev = intervals[0]
         for i in range(1, len(intervals)):

@@ -34,7 +34,9 @@ class Solution:
 
 
 
-board = [["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]]
+board = [["A","B","C","E"],
+         ["S","F","E","S"],
+         ["A","D","E","E"]]
 word = "ABCESEEEFS"
 a = Solution()
 print(a.exist(board, word))

@@ -13,7 +13,7 @@ class Solution:
     # you could iterate through first to insert the newinterval
     # then iterate again to merge
 
-    #  I wanted to try doing this in one pass though for fun, but i regret it 
+    #  I wanted to try doing this in one pass though for fun
     def insert(self, intervals, newInterval):
         if len(intervals)< 1:
             return [newInterval]

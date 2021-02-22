@@ -11,6 +11,9 @@ Output: ["eat","oath"]
 # add first letter of each word to hash table, add each word starting with that letter
 # iterate through board if letter is in hash table do a bfs search for each word
 # appending it to output if you do
+
+# the other solutions use a trie instead of a hash table to store the words. This can signficantly improve run time if
+# you have many words with similar prefixes 
 class Solution:
     def findWords(self, board, words):
         book = {}

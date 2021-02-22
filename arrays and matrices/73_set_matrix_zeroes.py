@@ -1,13 +1,15 @@
 '''
 Given an m x n matrix. If an element is 0, set its entire row and column to 0. Do it in-place.A straight forward solution using O(mn) space is probably a bad idea.
 A simple improvement uses O(m + n) space, but still not the best solution.
+
 Could you devise a constant space solution?
 
 Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
 Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 '''
 # first idea is to store two  arrays of columns and rows to be set to zero
-# 2nd idea is to use first row and first columns as arrays to hold boolean values of whether this row should change or not
+# 2nd idea is to use first row and first columns as arrays to hold boolean values of whether this row should change
+# to reduce space
 class Solution:
     def setZeroes(self, matrix):
         rowone = False
