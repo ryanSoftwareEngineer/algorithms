@@ -12,6 +12,8 @@ class Solution():
     def canJump(self, nums):
         target = len(nums)-1
         for i in range(target, -1, -1):
+            # going backwards anytime an index is able to jump to the end, it becomes our new target to reach
+            # until eventually our target becomes either the first index (0) or is false
             if nums[i]+ i >= target:
                 target = i
         return target == 0
@@ -43,5 +45,7 @@ class Solution2(object):
 a = Solution()
 # array =[3,9,2,42,5,6]
 
-array = [5,4,3,2,1,1]
+array = [4,1,1,1,0,1]
 print(a.canJump(array))
+# outputs:
+# False
