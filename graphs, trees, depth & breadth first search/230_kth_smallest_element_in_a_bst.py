@@ -5,9 +5,17 @@ Input: root = [5,3,6,2,4,null,null,1], k = 3
 Output: 3
 '''
 
-# at first thought this seems easy just do an in order traversal
+# do an in order traversal
+# when you reach a node that is none..
+# you flag k to start counting down
+# when k is 0 you set the answer to that node
 
-
+# you could set the flag in the class object instead of passing it through the recursive function. it would be a bit easier to read
+# so def __init__:
+#       self.k = None
+#       self.ans = None
+#       self.flag = False
+#
 class Solution:
     def kthSmallest(self, root, k):
         return self.in_order(root, k, False, None)[2]
