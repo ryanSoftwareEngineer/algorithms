@@ -17,10 +17,27 @@ this script is just for me to test new things i'm learning
 # cand = [2, 5, 7]
 # perm(cand, 0, len(cand)-1, set())
 
-s = "abcc"
-count = [0] * 26
-for c in s:
-    b= ord(c) - ord('a')
-    a= count[b]
-    print(a, b, c, ord(c))
-    count[b]+=1
+# matrix = []
+# row = [0, 0]
+# for i in range(2):
+#     matrix.append(row)
+# print(matrix)
+# matrix[1][1] = 1
+# print (matrix)
+def factory():
+    values = []
+    def widget(value):
+        values.append(value)
+        return values
+    print(values)
+    return widget
+'''
+widget has it's own state 
+'''
+worker = factory()
+worker(1)
+worker(2)
+print(worker(4))
+print(2%3)
+print(1//2)
+print([4]+ [3])
