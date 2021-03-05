@@ -22,7 +22,7 @@ def graph_valid_tree(n, edges):
 def dfs(map, node, visited, parent):
     print(node)
     if node in visited:
-        return False
+        return True
     visited.add(node)
     ans = False
     for child in map[node]:
