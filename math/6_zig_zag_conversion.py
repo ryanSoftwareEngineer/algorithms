@@ -21,6 +21,20 @@ P     I
 # set direction to increase
 # for every iteration of string s ... append to matrix then either increase or decrease row number
 # when row = 0 or numRows then change directon to increase row
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows >= len(s) or numRows == 1:
+            return s
+        cycle = 2*numRows-2
+        result = []
+        for i in range(numRows):
+            for j in range(0, len(s)+1, cycle):
+                if i > 0 and i < numRows-1 and j > 0:
+                    result.append(s[j-i])
+                if j+i < len(s):
+                    result.append(s[j+i])
+        return ''.join(result)
+
 
 class attempt_one:
     # fill a matrix then iterate hte matrix in order

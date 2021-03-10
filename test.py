@@ -20,5 +20,5 @@ this script is just for me to test new things i'm learning
 # print(2%3)
 # print(1//2)
 # print([4]+ [3])
-matrix = [[] for _ in range(4)]
-print (matrix)
+
+def get_sm(nu)
