@@ -10,7 +10,7 @@ Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
 # one could run this in place w/o using the extra result grid or arrays
 # such that grid[i][j] += min(grid[i-1][j], grid[i][j-1]) but I'm trying to relate to #62 unique paths problem
 def minPathSum2(grid):
-    row =len(grid)
+    row =len(grid)+
     col = len(grid[0])
     result = [grid[0][0]]* col
     row_result = [grid[0][0]]* row
