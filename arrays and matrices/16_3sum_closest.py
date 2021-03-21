@@ -5,7 +5,7 @@ Return the sum of the three integers. You may assume that each input would have 
 
 
 class Solution:
-    def threeSumClosest(self, nums: List[int], target: int) -> int:
+    def threeSumClosest(self, nums, target: int) -> int:
         nums.sort()
         closest = closeval = 2**31
         for i in range(len(nums)-2):
