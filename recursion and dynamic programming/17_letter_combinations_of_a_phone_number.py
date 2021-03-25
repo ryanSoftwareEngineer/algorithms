@@ -8,7 +8,7 @@ Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 
 
 class Solution:
-    def letterCombinations(self, digits: str) -> List[str]:
+    def letterCombinations(self, digits: str):
         if digits == "":
             return []
         book = {
