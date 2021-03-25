@@ -60,7 +60,7 @@ def getMinScore(product_nodes, product_edges, products_from, products_to):
             if ans is True:
                 if tuple(path) not in trios:
                     trios[tuple(path)] = path
-    mini = 2**32
+    mini = 2**31
     for key in trios:
         score = 0
         for j in key:
