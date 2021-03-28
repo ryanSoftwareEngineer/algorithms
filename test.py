@@ -1,4 +1,3 @@
-import sys
-
-for line in sys.stdin:
-    print(line)
+a = -1
+b = float(inf)
+print(b or a)
