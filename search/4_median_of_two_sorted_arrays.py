@@ -5,7 +5,7 @@ return the median of the two sorted arrays.
 
 # split smaller array
 # split the other array where equal length with total of left and right
-# if leftside first array <= rightside bottom  and leftside second <= right top :
+# if leftside top array <= rightside bottom  and vice versa :
 #  return max of two left sides and min of two right sides
 # if top left > right then split to the left side
 # else split to right side
@@ -14,16 +14,14 @@ class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         if len(nums1) > len(nums2):
             return self.findMedianSortedArrays(nums2, nums1)
-        count = 0
         total = len(nums1) + len(nums2)
         half = (total + 1) // 2
         left = 0
         right = len(nums1) - 1
         while left <= right:
-            count += 1
-            if count > 10: break;
             mid = (left + right) // 2
             bot = half - mid
+            #TODO:// float(inf) vs float('inf') find out which versions support what
             leftx = float(-inf) if mid <= 0 else nums1[mid - 1]
             righty = float(inf) if bot >= len(nums2) else nums2[bot]
             lefty = float(-inf) if bot <= 0 else nums2[bot - 1]
