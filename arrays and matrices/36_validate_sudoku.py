@@ -2,10 +2,13 @@
 Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
 
 ooo a solver might be a fun addition to this...
-I'm thinking would prolly require loop to add value to blanks, validating then backtracking if validation fails and moving on to next
-integer
+I'm thinking would prolly require loop to add value to blanks, validating against it's current row, col and mini block
+then backtracking if validation fails and moving on to next integer
 '''
 
+# i calculated the mini block kinda poorly as it's set to 9x9 ...
+#  a better solution would be mini = (col//3)+ 3*(current row //3)
+#  at col 5, row 6 => 5//3, 6//3 => 1,2 = 1+ 6 = mini block #7
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
