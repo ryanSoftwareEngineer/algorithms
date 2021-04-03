@@ -39,4 +39,27 @@ class Solution:
             i+=1
         return ''.join(dp)
 
+
+class Solution_recursive:
+    def countAndSay(self, n: int) -> str:
+        path = self.helper(n)
+        return ''.join(path)
+
+    def helper(self, n):
+        if n == 1:
+            return ['1']
+        phrase = self.countAndSay(n - 1)
+        i = 1
+        j = 0
+        newphrase = []
+        while i < len(phrase) + 1:
+            if i < len(phrase):
+                if phrase[i] == phrase[i - 1]:
+                    i += 1
+                    continue
+            newphrase.append(str(i - j))
+            newphrase.append(phrase[i - 1])
+            j = i
+            i += 1
+        return newphrase
 # input 5 = "111221"
