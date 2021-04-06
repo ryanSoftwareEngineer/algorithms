@@ -5,7 +5,7 @@ Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
 # in this solution we essentially double n while doubling x until n == the n we're looking for
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        if n <0:git 
+        if n <0:
             return (1 / self.myPow(x, abs(n)))
         if n==0:
             return 1
