@@ -2,10 +2,10 @@
 Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
 '''
 # x^n can be divided such that x^(n/2) * x^(n/2) = x^n continuously
-# in this solution we esentially double n while doubling x until n == the n we're looking for
+# in this solution we essentially double n while doubling x until n == the n we're looking for
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        if n <0:
+        if n <0:git 
             return (1 / self.myPow(x, abs(n)))
         if n==0:
             return 1
