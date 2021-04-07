@@ -15,6 +15,7 @@ class Solution:
             i = 1
             prev = 1
             prev_val = xval
+            # while i < n/2
             while i < n:
                 prev_val = xval
                 xval*=xval
