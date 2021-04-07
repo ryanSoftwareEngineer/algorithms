@@ -7,6 +7,9 @@ An obstacle and space is marked as 1 and 0 respectively in the grid.
 https://leetcode.com/problems/unique-paths-ii/
 '''
 
+# at every point at coordinate row, col
+# the number of unique paths at row, col = the number of paths to row-1, col + row, col-1
+# if an obstacle is hit then we set that row, col to 0
 
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
