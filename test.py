@@ -1,6 +1,7 @@
 from collections import Counter
 
-a = 4
-b = False
-c = b+ 4
-print(c)
+a = 1
+a<<=1
+print(a)
+a<<=1
+print(a)
