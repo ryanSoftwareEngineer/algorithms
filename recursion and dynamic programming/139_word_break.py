@@ -9,6 +9,29 @@ Explanation: Return true because "leetcode" can be segmented as "leet code".
 Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 Output: false
 '''
+
+# bfs solution 
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        que = deque()
+        que.append(0)
+        words = set(wordDict)
+        visited = set()
+        while que:
+            start = que.pop()
+            if start in visited:
+                continue
+            for end in range(start+1, len(s)+1):
+                word = s[start:end]
+                if word in words:
+                    print(word, end)
+                    que.appendleft(end)
+                    if end == len(s):
+                        return True
+                    visited.add(start)
+        return False
+
+# recursve solution with memoization
 class Solution:
     def wordBreak(self, s, wordDict):
         return self.util(s, wordDict, 0, {})
