@@ -21,7 +21,7 @@ from queue import PriorityQueue
 # b = []
 # print(min(b))
 
-a = 'a'
-b = '07'
-for i in range(2,2):
-    print(i)
+a = [1,0,3,4,2,6,12,1]
+b = 5
+c = max(a)
+print(c)
