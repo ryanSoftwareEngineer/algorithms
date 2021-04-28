@@ -25,8 +25,6 @@ Output: 15
 # attempt one: memoization and recursion
 # we're trying to find all possible combinations of the different ways we can partition an array
 # if d =2 we want to cut the array in two parts
-# consider the array [6,5,4,3,2,1] and d =2
-# we want to try the following combinations:
 # [6][5,4,3,2,1]
 # [6,5][4,3,2,1]
 # [6,5,4][3,2,1]

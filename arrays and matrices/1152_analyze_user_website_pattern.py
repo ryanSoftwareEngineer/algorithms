@@ -30,7 +30,7 @@ from collections import defaultdict
 # store three arrays in one matrix then sort
 # for each username find all tuples permutations of their book[username] = [ list of visits ]
 # find all by permutations via brute forcing each subset of visits appending count of trio's
-# iterate through answers.keys to find greatest count and lowest string 
+# iterate through answers.keys to find greatest count and lowest string
 class Solution:
     def mostVisitedPattern(self, username: List[str], timestamp: List[int], website: List[str]) -> List[str]:
         triple = sorted(zip(username, timestamp, website))
