@@ -24,7 +24,13 @@ int move(String direction) Returns the score of the game after applying one dire
 # when the snake moved without eating we would pop the tail end of the linkedlist and
 # add the new position to the head. If we were eating food then we just add a new head in front
 # i used a set() to keep track of the snakes body ( the snakes body are the linkedlist nodes)
-# 
+
+
+# the question is not clear how it wants to handle invalid entries... for example if the snake is moving left
+# and you try to immediately do a 180 and turn right... that input is invalid or blocked.
+# the testcase seems to treat it differently but it's not clear how 
+
+
 class Node:
     def __init__(self, val=None):
         self.val = val
@@ -74,10 +80,10 @@ class SnakeGame:
         self.foods = {}
         i = 0
         for f in food:
-            self.foods[(f[0], f[1])] = i
+            self.foods[i] = (f[0], f[1])
             i += 1
         self.foodcounter = 0
-        self.board = [[0] * width for _ in range(height)]
+        self.board = [[0] * width] * height
         self.movemap = {
             'R': (0, 1),
             'L': (0, -1),
@@ -90,24 +96,28 @@ class SnakeGame:
             'U': 'D',
             'D': 'U',
         }
-        self.disabled = 'L'
+        self.disabled = None
 
     def move(self, direction: str) -> int:
 
         if direction == self.disabled:
-            return
+            return 0
         self.disabled = self.disablemap[direction]
         head = self.snake.head.next
         newlocation = (head.val[0] + self.movemap[direction][0], head.val[1] + self.movemap[direction][1])
+        print(newlocation, self.foods[self.foodcounter])
         if newlocation[0] < 0 or newlocation[0] >= len(self.board):
             return -1
         if newlocation[1] < 0 or newlocation[1] >= len(self.board[0]):
             return -1
         if newlocation in self.snake.body:
-            return -1
-        if newlocation in self.foods and self.foods[newlocation] == self.foodcounter:
+            if newlocation != self.snake.tail.prev.val or (
+                    newlocation in self.foods and self.foods[newlocation] == self.foodcounter):
+                return -1
+        if self.foodcounter < len(self.foods) and newlocation == self.foods[self.foodcounter]:
             self.snake.eatfood(newlocation)
             self.foodcounter += 1
         else:
             self.snake.swaptail(newlocation)
         return len(self.snake.body) - 1
+
