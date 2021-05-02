@@ -26,9 +26,6 @@ int move(String direction) Returns the score of the game after applying one dire
 # i used a set() to keep track of the snakes body ( the snakes body are the linkedlist nodes)
 
 
-# the question is not clear how it wants to handle invalid entries... for example if the snake is moving left
-# and you try to immediately do a 180 and turn right... that input is invalid or blocked.
-# the testcase seems to treat it differently but it's not clear how 
 
 
 class Node:
@@ -100,8 +97,13 @@ class SnakeGame:
 
     def move(self, direction: str) -> int:
 
-        if direction == self.disabled:
-            return 0
+        # the question is not clear how it wants to handle invalid entries... for example if the snake is moving left
+        # and you try to immediately do a 180 and turn right... that input is invalid or blocked.
+        # the testcase seems to treat it differently though... so to make it pass I had to comment out the below line
+        # but imo the testcase is invalid not this line.
+
+        # if direction == self.disabled:
+        #     return 0
         self.disabled = self.disablemap[direction]
         head = self.snake.head.next
         newlocation = (head.val[0] + self.movemap[direction][0], head.val[1] + self.movemap[direction][1])
