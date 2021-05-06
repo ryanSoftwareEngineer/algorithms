@@ -1,13 +1,11 @@
+from collections import defaultdict
 
-from collections import defaultdict, Counter, deque
-from queue import PriorityQueue
-import heapq
+a = 5
 
-a = defaultdict(int)
+if a == 5:
+    node = 4
+else:
+    node = 6
 
-a = [1,2,43,5,1,12,9,5,7]
-c = Counter(a)
-print(c)
-
-d = deque()
-print (d)
+print(node)
+a = defaultdict(a)
