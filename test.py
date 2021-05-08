@@ -1,11 +1,8 @@
-from collections import defaultdict
-
-a = 5
-
-if a == 5:
-    node = 4
-else:
-    node = 6
-
-print(node)
-a = defaultdict(a)
+map = {}
+class node:
+    def __init__(self):
+        self.val = 5
+        self.next = None
+map[1] = 'a'
+map[2] = node()
+print(map)
