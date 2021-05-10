@@ -7,6 +7,9 @@ The integer division should truncate toward zero.
 Input: s = "3+2*2"
 Output: 7
 '''
+from collections import deque
+
+
 class Solution:
     def calculate(self, s: str) -> int:
 
