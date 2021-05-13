@@ -54,9 +54,11 @@ class Trie:
 # Your Trie object will be instantiated and called as such:
 obj = Trie()
 obj.insert("apple")
+obj.insert("test")
+obj.insert("app")
 param_2 = obj.search("apple")
 print(param_2)
 param_3 = obj.search("app")
 print(param_3)
-a4 = obj.startsWith("app")
+a4 = obj.search("tes")
 print(a4)

@@ -63,5 +63,5 @@ wordDictionary.addWord("add");
 # print(a)
 # a= wordDictionary.search(".ad");
 # print(a)
-a= wordDictionary.search("a");
+a= wordDictionary.search("at");
 print(a)

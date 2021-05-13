@@ -21,6 +21,8 @@ class Solution:
         i = 0
         while orders > 0:
             width += 1
+            # the inventory is always greater than balls in
+            # the question so u don't need to worry of index out of range
             if inventory[i] > inventory[i + 1]:
                 n = inventory[i]
                 d = inventory[i + 1]
